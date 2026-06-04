@@ -13,7 +13,7 @@ func main() {
 	mux.Handle("/", http.FileServer(http.Dir(filepathRoot)))
 
 	srv := http.Server{
-		Addr: ":" + port,
+		Addr:    ":" + port,
 		Handler: mux,
 	}
 
