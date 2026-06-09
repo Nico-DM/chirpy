@@ -41,3 +41,13 @@ CREATE DATABASE chirpy;
 ```bash
 psql "postgres://nico:@localhost:5432/chirpy"
 ```
+
+### Run Migrations
+
+```bash
+cd sql/schema && goose postgres "postgres://nico:@localhost:5432/chirpy" up && cd ../..
+```
+
+```bash
+cd sql/schema && goose postgres "postgres://nico:@localhost:5432/chirpy" down && cd ../..
+```
