@@ -51,3 +51,9 @@ cd sql/schema && goose postgres "postgres://nico:@localhost:5432/chirpy" up && c
 ```bash
 cd sql/schema && goose postgres "postgres://nico:@localhost:5432/chirpy" down && cd ../..
 ```
+
+### Generate SQLC
+
+```bash
+sqlc generate
+```
