@@ -57,3 +57,9 @@ cd sql/schema && goose postgres "postgres://nico:@localhost:5432/chirpy" down &&
 ```bash
 sqlc generate
 ```
+
+### Stop Database
+
+```bash
+pg_ctl -D ~/postgres-data stop
+```
