@@ -16,11 +16,7 @@ func (cfg *apiConfig) handlerChirpsGet(w http.ResponseWriter, r *http.Request) {
 
 	dbChirp, err := cfg.db.GetChirp(r.Context(), chirpID)
 	if err != nil {
-		if err.Error() == "sql: no rows in result set" {
-			respondWithError(w, http.StatusNotFound, "Chirp not found", err)
-			return
-		}
-		respondWithError(w, http.StatusInternalServerError, "Couldn't get chirp", err)
+		respondWithError(w, http.StatusNotFound, "Chirp not found", err)
 		return
 	}
 
